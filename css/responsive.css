@@ -1,0 +1,19 @@
+@media screen and (max-width: 768px)
+{
+	.desktop,.desk
+	{
+		display: none !important;
+	}
+	.mobile
+	{
+		display: block;
+	}
+	.mynavmenu ul
+	{
+		padding:0;
+	}
+	.mynavmenu
+	{
+		position: relative;
+	}
+}
