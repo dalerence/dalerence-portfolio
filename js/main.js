@@ -50,27 +50,27 @@ $("#acceptName").click(function(){
 		$("#home,.menubar").addClass("active");
 	},1500)
 })
-$(".proj-list").owlCarousel({
-	loop:false,
-	dots:false,
-	responsive:{
-		0:{
-			items:2
-		},
-		480:{
-			items:3
-		},
-		1366:{
-			items:5
-		},
-		1500:{
-			items:6
-		},
-		1900:{
-			items:7
-		}
-	}
-})
+// $(".proj-list").owlCarousel({
+// 	loop:false,
+// 	dots:false,
+// 	responsive:{
+// 		0:{
+// 			items:2
+// 		},
+// 		480:{
+// 			items:3
+// 		},
+// 		1366:{
+// 			items:5
+// 		},
+// 		1500:{
+// 			items:6
+// 		},
+// 		1900:{
+// 			items:7
+// 		}
+// 	}
+// })
 $(".proj-nav .left").click(function(){
 	$(".proj-list").trigger("prev")
 });
@@ -78,9 +78,55 @@ $(".proj-nav .right").click(function(){
 	$(".proj-list").trigger("next")
 });
 
+$(".proj-menu li").click(function(){
+	$(".proj-menu li.active").removeClass("active");
+	$(this).addClass("active");
+})
 
 
+function changeItemHeight(){
+	var itemwidth=$("#portfolio .proj-item .proj-img").width();
+	itemwidth = itemwidth * 0.875;
+	$("#portfolio .proj-item .proj-img").height(itemwidth)
+}
 
+$(window).load(function(){
+	changeItemHeight();
+
+	var items = $(".proj-list")
+	items.isotope({
+	  itemSelector: '.proj-item',
+	  stagger: 30
+	});
+
+	$("#all").click(function(){
+		items.isotope({
+			filter:".proj-item"
+		})
+	})
+
+	$("#graphics").click(function(){
+		items.isotope({
+			filter:".graphics"
+		})
+	})
+
+	$("#web").click(function(){
+		items.isotope({
+			filter:".web"
+		})
+	})
+
+	$("#others").click(function(){
+		items.isotope({
+			filter:".others"
+		})
+	})
+
+});
+$(window).resize(function(){
+	changeItemHeight();
+})
 
 
 // function writeToFile()

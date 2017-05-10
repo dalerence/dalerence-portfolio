@@ -281,7 +281,8 @@ title
 	overflow: scroll;
 	height: calc(100% - 278px)
 }
-#about .about-desc::-webkit-scrollbar
+#about .about-desc::-webkit-scrollbar,
+#portfolio .proj-list-container::-webkit-scrollbar
 {
 	display: none;
 }
@@ -397,7 +398,9 @@ a.button:hover:before
 
 #portfolio .proj-list-container
 {
-	position:relative
+	position:relative;
+    overflow: auto;
+    height: 80vh;
 }
 #portfolio .desc-container
 {
@@ -437,13 +440,13 @@ a.button:hover:before
 }
 #portfolio .proj-list
 {
-	width:75%;
+	width:100%;
 	margin:0 auto;
 	margin-top:40px;
 	position:relative
 	/* padding: 0 30.2px; */
 }
-#portfolio .proj-list:after,
+/*#portfolio .proj-list:after,
 #portfolio .proj-list:before
 {
 	content:"";
@@ -461,17 +464,18 @@ a.button:hover:before
 #portfolio .proj-list:before
 {
 	right:-1px;
-}
+}*/
 #portfolio .proj-list .proj-item
 {
 	/* float:left; */
-	/* width:20%; */
+	 width:20%; 
 }
 #portfolio .proj-list .proj-item .proj-img
 {
 	background:#ece240;
-	width: 170px;
-	height: 110px;
+	width: 100%;
+	height: 400px;
+	padding:10px;
 	margin:0 auto;
 }
 #portfolio .proj-nav
@@ -484,35 +488,12 @@ a.button:hover:before
 	right:0;
 	/* z-index:-1; */
 }
-#portfolio .proj-nav .left,
-#portfolio .proj-nav .right
-{
-	position:absolute;
-	top:0;
-	border:4px solid #ece240;
-	width:30px;
-	height:30px;
-	cursor:pointer;
-	z-index:9;
-}
+
 #portfolio .container
 {
 	max-width: none;
 }
-#portfolio .proj-nav .right
-{
-	border-bottom:0;
-	border-left:0;
-	right:0;
-	transform:rotateZ(45deg);
-}
-#portfolio .proj-nav .left
-{
-	border-top:0;
-	border-right:0;
-	left:0;
-	transform:rotateZ(45deg);
-}
+
 #portfolio .proj-menu
 {
 	inline-block;
@@ -540,8 +521,37 @@ a.button:hover:before
 .align-middle
 {
 	position:absolute;
-	top:50%;
+	top:0;
 	left:0;
 	width:100%;
-	transform:translateY(calc(-60% + 30px))
+
+}
+#portfolio .nav-container
+{
+	position: absolute;
+	left:0;
+	bottom:0;
+	width: 100%;
+}
+#portfolio .proj-img .details
+{
+    position: absolute;
+    /* top: 0; */
+    bottom: 25px;
+    left: 0;
+    padding: 5px 10px;
+    padding-bottom: 15px;
+    background: rgba(0,0,0,0.6);
+}
+#portfolio .proj-img .details h3
+{
+	font-family: "Montserrat",sans-serif;
+}
+#portfolio .proj-img .details p
+{
+
+    background: #989227;
+    display: inline-block;
+    padding: 0 10px;
+    position: absolute;
 }
