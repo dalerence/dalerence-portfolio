@@ -93,11 +93,7 @@ function changeItemHeight(){
 $(window).load(function(){
 	changeItemHeight();
 
-	var items = $(".proj-list")
-	items.isotope({
-	  itemSelector: '.proj-item',
-	  stagger: 30
-	});
+	
 
 	$("#all").click(function(){
 		items.isotope({
@@ -122,6 +118,11 @@ $(window).load(function(){
 			filter:".others"
 		})
 	})
+	var items = $(".proj-list")
+	items.isotope({
+	  itemSelector: '.proj-item',
+	  stagger: 30
+	});
 
 });
 $(window).resize(function(){

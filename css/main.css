@@ -472,11 +472,45 @@ a.button:hover:before
 }
 #portfolio .proj-list .proj-item .proj-img
 {
-	background:#ece240;
+	
 	width: 100%;
 	height: 400px;
 	padding:10px;
 	margin:0 auto;
+	position: relative;
+	overflow: hidden;
+	transition: 0.3s ease;
+	cursor:pointer;
+}
+#portfolio .proj-list .proj-item .proj-img:after,
+#portfolio .proj-list .proj-item .proj-img:before
+{
+	content:"";
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0);
+	transition: 0.3s ease;
+}
+#portfolio .proj-list .proj-item .proj-img:before
+{
+	background:url(../img/portfolio/1.png);
+	background-size: cover;
+	background-position: center center;
+}
+#portfolio .proj-list .proj-item .proj-img:hover:after
+{
+	background:rgba(0,0,0,0.3);
+}
+#portfolio .proj-list .proj-item .proj-img:hover:before
+{
+	transform: scale(1.1)
+}
+#portfolio .proj-list .proj-item .proj-img:hover .details
+{
+	background:rgba(0,0,0,1);
 }
 #portfolio .proj-nav
 {
@@ -499,7 +533,11 @@ a.button:hover:before
 	inline-block;
 	margin:0 auto;
 	text-align:center;
-	margin-top:40px;
+	padding-bottom:20px;
+}
+#portfolio .heading
+{
+	margin:20px 0; 
 }
 #portfolio .proj-menu li
 {
@@ -541,7 +579,9 @@ a.button:hover:before
     left: 0;
     padding: 5px 10px;
     padding-bottom: 15px;
+    z-index: 2;
     background: rgba(0,0,0,0.6);
+    transition: 0.3s;
 }
 #portfolio .proj-img .details h3
 {
