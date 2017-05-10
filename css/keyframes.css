@@ -1,0 +1,475 @@
+/*------------------------------------------------LEFT-*/
+@-webkit-keyframes from-left
+{
+	from{
+		transform: translateX(-150%);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+@keyframes from-left
+{
+	from{
+		transform: translateX(-150%);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+/*------------------------------------------------LEFT EXIT-*/
+@-webkit-keyframes from-left-exit
+{
+	from{
+		transform: translateX(0);
+	}
+	to{
+		transform: translateX(-150%);
+	}
+}
+@keyframes from-left-exit
+{
+	from{
+		transform: translateX(0);
+	}
+	to{
+		transform: translateX(-150%);
+	}
+}
+
+
+/*------------------------------------------------RIGHT-*/
+@-webkit-keyframes from-right
+{
+	from{
+		transform: translateX(150%);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+@keyframes from-right
+{
+	from{
+		transform: translateX(150%);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+/*------------------------------------------------RIGHT EXIT-*/
+@-webkit-keyframes from-right-exit
+{
+	from{
+		transform: translateX(0);
+	}
+	to{
+		transform: translateX(150%);
+	}
+}
+@keyframes from-right-exit
+{
+	from{
+		transform: translateX(0);
+	}
+	to{
+		transform: translateX(150%);
+	}
+}
+
+/*------------------------------------------------TOP-*/
+@-webkit-keyframes from-top
+{
+	from{
+		transform: translateY(-150%);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+@keyframes from-top
+{
+	from{
+		transform: translateY(-150%);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+
+/*------------------------------------------------TOP-EXIT*/
+
+@-webkit-keyframes from-top-exit
+{
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(-150%);
+	}
+}
+@keyframes from-top-exit
+{
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(-150%);
+	}
+}
+
+/*------------------------------------------------BOTTOM-*/
+@-webkit-keyframes from-bottom
+{
+	from{
+		transform: translateY(150%);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+@keyframes from-bottom
+{
+	from{
+		transform: translateY(150%);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+
+/*------------------------------------------------BOTTOM EXIT-*/
+@-webkit-keyframes from-bottom-exit
+{
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(150%);
+	}
+}
+@keyframes from-bottom-exit
+{
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(150%);
+	}
+}
+
+
+/*------------------------------------------------LINE HEIGHT EXIT-*/
+@-webkit-keyframes toHeight-exit
+{
+	0%{
+		height:0;
+	}
+	25%{
+		height: 100%;
+	}
+	75%{
+		height: 100%;
+	}
+	100%
+	{
+		height: 0;
+	}
+}
+@keyframes toHeight-exit
+{
+	0%{
+		height:0;
+	}
+	25%{
+		height: 100%;
+	}
+	75%{
+		height: 100%;
+	}
+	100%
+	{
+		height: 0;
+	}
+}
+
+
+/*------------------------------------------------LINE HEIGHT-*/
+@-webkit-keyframes toHeight
+{
+	0%{
+		height:0;
+	}
+	25%{
+		height: 100%;
+	}
+	75%{
+		height: 100%;
+	}
+	100%
+	{
+		height: 0;
+	}
+}
+@keyframes toHeight
+{
+	0%{
+		height:0;
+	}
+	25%{
+		height: 100%;
+	}
+	75%{
+		height: 100%;
+	}
+	100%
+	{
+		height: 0;
+	}
+}
+
+
+/*------------------------------------------------LINE WIDTH EXIT-*/
+@-webkit-keyframes toWidth-exit
+{
+	0%{
+		width:0;
+	}
+	25%{
+		width: 100%;
+	}
+	75%{
+		width: 100%;
+	}
+	100%
+	{
+		width: 0;
+	}
+}
+@keyframes toWidth-exit
+{
+	0%{
+		width:0;
+	}
+	25%{
+		width: 100%;
+	}
+	75%{
+		width: 100%;
+	}
+	100%
+	{
+		width: 0;
+	}
+}
+/*------------------------------------------------LINE WIDTH-*/
+@-webkit-keyframes toWidth
+{
+	0%{
+		width:0;
+	}
+	25%{
+		width: 100%;
+	}
+	75%{
+		width: 100%;
+	}
+	100%
+	{
+		width: 0;
+	}
+}
+@keyframes toWidth
+{
+	0%{
+		width:0;
+	}
+	25%{
+		width: 100%;
+	}
+	75%{
+		width: 100%;
+	}
+	100%
+	{
+		width: 0;
+	}
+}
+
+/*------------------------------------------------LINE WIDTH NO EXIT-*/
+@-webkit-keyframes toWidth-NoEx
+{
+	0%{
+		width:0;
+	}
+	25%{
+		width: 100%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+@keyframes toWidth-NoEx
+{
+	0%{
+		width:0;
+	}
+	25%{
+		width: 100%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+/*------------------------------------------------LINE WIDTH NO EXIT (EXIT)-*/
+@-webkit-keyframes toWidth-NoEx-exit
+{
+	0%{
+		width:100%;
+	}
+	75%{
+		width: 100%;
+	}
+	100%{
+		width:0;
+	}
+}
+@keyframes toWidth-NoEx-exit
+{
+	0%{
+		width:100%;
+	}
+	75%{
+		width: 100%;
+	}
+	100%{
+		width: 0;
+	}
+}
+
+/*------------------------------------------------LINE HEIGHT NO EXIT(EXIT)-*/
+@-webkit-keyframes toHeight-NoEx-exit
+{
+	0%{
+		height:100%;
+	}
+	75%{
+		height: 100%;
+	}
+	100%{
+		height: 0;
+	}
+}
+@keyframes toHeight-NoEx-exit
+{
+	0%{
+		height:100%;
+	}
+	75%{
+		height: 100%;
+	}
+	100%{
+		height: 0;
+	}
+}
+/*------------------------------------------------LINE HEIGHT NO EXIT-*/
+@-webkit-keyframes toHeight-NoEx
+{
+	0%{
+		height:0;
+	}
+	100%{
+		height: 100%;
+	}
+	
+}
+@keyframes toHeight-NoEx
+{
+	0%{
+		height:0;
+	}
+	100%{
+		height: 100%;
+	}
+}
+
+/*------------------------------------------------BACKGROUND IMG EXIT-*/
+@-webkit-keyframes bgImg-exit
+{
+	from{
+		opacity:1;
+	}
+	to{
+		opacity:0;
+	}
+}
+@keyframes bgImg
+{
+	from{
+		opacity:1;
+	}
+	to{
+		opacity: 0;
+	}
+}
+/*------------------------------------------------BACKGROUND IMG-*/
+@-webkit-keyframes bgImg
+{
+	from{
+		opacity:0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes bgImg
+{
+	from{
+		opacity:0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+/*------------------------------------------------RIBBON WIDTH EXIT-*/
+@-webkit-keyframes ribWidth-exit
+{
+	from{
+		width: 230px;
+	}
+	to{
+		width: 0;
+	}
+}
+@keyframes ribWidth-exit
+{
+	from{
+		width: 230px;
+	}
+	to{
+		width: 0;
+	}
+}
+/*------------------------------------------------RIBBON WIDTH-*/
+@-webkit-keyframes ribWidth
+{
+	from{
+		width:0;
+	}
+	to{
+		width: 230px;
+	}
+}
+@keyframes ribWidth
+{
+	from{
+		width:0;
+	}
+	to{
+		width: 230px;
+	}
+}

@@ -1,0 +1,284 @@
+
+section.active .from-left,
+section.active .from-right,
+section.active .from-top,
+section.active .from-bottom
+{
+	transform:translateX(0);
+	overflow: hidden;
+}
+section.active .from-right > *
+{
+	transform: translateX(150%);
+	-webkit-animation:from-right 1.3s ease;
+	animation:from-right 1.3s ease;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards;  
+}
+section.active .from-left > *
+{
+	transform: translateX(-150%);
+	-webkit-animation:from-left 1.3s ease;
+	animation:from-left 1.3s ease;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;  
+}
+section.active .from-bottom > *, #menuList .from-bottom > *
+{
+	transform: translateY(150%);
+	-webkit-animation:from-bottom 1.3s ease;
+	animation:from-bottom 1.3s ease;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;  
+}
+section.active .from-top > *,.menu .from-top > *
+{
+	transform: translateY(-150%);
+	-webkit-animation:from-top 1.3s ease;
+	animation:from-top 1.3s ease;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;  
+}
+section.active .bgImg{
+	opacity: 0;
+	-webkit-animation: bgImg 4s;
+	-webkit-animation-fill-mode: forwards;
+	animation: bgImg 4s;
+	animation-fill-mode: forwards;
+}
+.has-line{position: relative;}
+.has-line:before
+{
+	content: "";
+	position: absolute;
+}
+section.active .has-line.line-left.noEx:before,
+section.active .has-line.line-right.noEx:before
+{
+	-webkit-animation: toHeight-NoEx 1s;
+	animation: toHeight-NoEx 1s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards;  
+}
+section.active.exit .has-line.line-left.noEx:before,
+section.active.exit .has-line.line-right.noEx:before
+{
+	-webkit-animation: toHeight-NoEx-exit 1.6s;
+	animation: toHeight-NoEx-exit 1.6s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards;  
+}
+section.active .has-line.line-bottom.noEx:before,
+section.active .has-line.line-top.noEx:before,
+.menubar .has-line.line-top.noEx:before
+{
+	-webkit-animation: toWidth-NoEx 1.6s;
+	animation: toWidth-NoEx 1.6s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards;  
+}
+
+section.active.exit .has-line.line-bottom.noEx:before,
+section.active.exit .has-line.line-top.noEx:before
+{
+	-webkit-animation: toWidth-NoEx-exit 1.6s;
+	animation: toWidth-NoEx-exit 1.6s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards;  
+}
+section.active .has-line.line-left:before,
+section.active .has-line.line-right:before
+{
+	top:50%;
+	height: 0;
+	-webkit-animation: toHeight 3s;
+	animation: toHeight 3s;
+	width: 4px;
+	background: linear-gradient(rgba(0,0,0,0),rgba(255,255,255,0.8),rgba(0,0,0,0));
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+	z-index: 9;
+}
+
+section.active .has-line.line-bottom:before,
+section.active .has-line.line-top:before,
+.menubar .has-line.line-top:before
+{
+	left:50%;
+	width: 100%;
+	height: 4px;
+	-webkit-animation: toWidth 3s;
+	animation: toWidth 3s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards;
+	background: -webkit-linear-gradient(left,rgba(0,0,0,0),rgba(255,255,255,0.8),rgba(0,0,0,0));
+	background: -moz-linear-gradient(right,rgba(0,0,0,0),rgba(255,255,255,0.8),rgba(0,0,0,0));
+	-webkit-transform:translate(-50%,0);
+	transform:translate(-50%,0);
+}
+section.exit .has-line.line-left:before,
+section.exit .has-line.line-right:before
+{
+	-webkit-animation: toHeight-exit 2.5s;
+	animation: toHeight-exit 2.5s;
+	animation-fill-mode: forwards;
+}
+section.exit .has-line.line-top:before,
+section.exit .has-line.line-bottom:before
+{
+	-webkit-animation: toWidth-exit 2s;
+	animation: toWidth-exit 2s;
+	animation-fill-mode: forwards;
+}
+section.active.exit .from-left > *
+{
+	transform:translateX(0);
+	-webkit-animation:from-left-exit 1.3s ease;
+	animation:from-left-exit 1.3s ease;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards;  
+}
+section.active.exit .from-left.exNoDelay > *
+{
+	transform:translateX(0);
+	-webkit-animation:from-left-exit 1.3s ease;
+	animation:from-left-exit 1.3s ease;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards; 
+}
+section.active.exit .from-right > *
+{
+	transform:translateX(0);
+	-webkit-animation:from-right-exit 1.3s ease;
+	animation:from-right-exit 1.3s ease;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards; 
+}
+section.active.exit .from-right.exNoDelay > *
+{
+	transform:translateX(0);
+	-webkit-animation:from-right-exit 1.3s ease;
+	animation:from-right-exit 1.3s ease;
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards; 
+}
+section.active.exit .from-bottom > *
+{
+	transform:translateY(0);
+	-webkit-animation:from-bottom-exit 1.3s ease;
+	animation:from-bottom-exit 1.3s ease;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards; 
+}
+section.active.exit .from-bottom.exNoDelay > *
+{
+	transform:translateY(0);
+	-webkit-animation:from-bottom-exit 1.3s ease;
+	animation:from-bottom-exit 1.3s ease;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards; 
+}
+section.active.exit .from-top > *
+{
+	transform:translateY(0);
+	-webkit-animation:from-top-exit 1.3s ease;
+	animation:from-top-exit 1.3s ease;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards; 
+}
+section.active.exit .from-top.exNoDelay > *
+{
+	transform:translateY(0);
+	-webkit-animation:from-top-exit 1.3s ease;
+	animation:from-top-exit 1.3s ease;
+	-webkit-animation-fill-mode: forwards;  
+	animation-fill-mode: forwards; 
+}
+section.active.exit.ribbon-lb:after
+{
+	width: 230px;
+	animation:ribWidth-exit 1.3s;
+	-webkit-animation:ribWidth-exit 1.3s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	animation-delay: 0.3s;
+}
+section.active.exit .bgImg
+{
+	-webkit-animation:bgImg-exit 1.3s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	animation:bgImg-exit 1.3s;
+}
+
+section.active .from-bottom.animDelay > *
+{
+	transform: translateY(150%);
+	-webkit-animation:from-bottom 1.3s ease;
+	animation:from-bottom 1.3s ease;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;  
+}
+section.active .from-top.animDelay > *
+{
+	transform: translateY(150%);
+	-webkit-animation:from-top 1.3s ease;
+	animation:from-top 1.3s ease;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;  
+}
+section.active .from-left.animDelay > *
+{
+	transform: translateY(150%);
+	-webkit-animation:from-left 1.3s ease;
+	animation:from-left 1.3s ease;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;  
+}
+section.active .from-right.animDelay > *
+{
+	transform: translateY(150%);
+	-webkit-animation:from-right 1.3s ease;
+	animation:from-right 1.3s ease;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;  
+}
+.has-line.line-left.animDelay:before,
+.has-line.line-top.animDelay:before,
+.has-line.line-right.animDelay:before,
+.has-line.line-bottom.animDelay:before{
+	-webkit-animation:toWidth 2s;
+	-webkit-animation-delay: 5s;
+	animation-delay:5s;
+}
+#about.active .dbox
+{
+	width: 100px;
+	-webkit-transition-delay:1s;
+	transition-delay:1s;
+}
+#about.active.exit .dbox
+{
+	width: 0;
+	-webkit-transition-delay:0.5s;
+	transition-delay:0.5s;
+}
