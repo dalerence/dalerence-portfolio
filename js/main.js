@@ -84,17 +84,7 @@ $(".proj-menu li").click(function(){
 })
 
 
-function changeItemHeight(){
-	var itemwidth=$("#portfolio .proj-item .proj-img").width();
-	itemwidth = itemwidth * 0.875;
-	$("#portfolio .proj-item .proj-img").height(itemwidth)
-}
-
 $(window).load(function(){
-	changeItemHeight();
-
-	
-
 	$("#all").click(function(){
 		items.isotope({
 			filter:".proj-item"
@@ -118,6 +108,10 @@ $(window).load(function(){
 			filter:".others"
 		})
 	})
+
+	var itemwidth=$("#portfolio .proj-item .proj-img").width();
+	itemwidth = itemwidth * 0.875;
+	$("#portfolio .proj-item .proj-img").height(itemwidth);
 	var items = $(".proj-list")
 	items.isotope({
 	  itemSelector: '.proj-item',
@@ -129,7 +123,50 @@ $(window).resize(function(){
 	changeItemHeight();
 })
 
+var randArray=projects;
+var loops=0;
+var rand;
+$("head").append("<style id='bgimgs'></style>");
 
+function giveRandom(){
+   rand = Math.floor(Math.random() * projects.length);
+}
+
+
+for(i=projects.length;i>0;i--){
+	giveRandom();
+	if(randArray[rand]!="done")
+	{
+		loadProject(rand)
+		randArray[rand]="done";
+	}
+	else
+	{
+		i+=1;
+	}
+}
+
+
+function loadProject(i)
+{
+		var bgimg = i+".png";
+		$(".proj-list").append(`
+				<div class="proj-item `+projects[i].category+`">
+                    <div class="proj-img bgimg`+i+`">
+        			    <div class="details">
+                       		<h3 class="title">`+projects[i].title.toUpperCase()+`</h3>
+                            <p class="category">`+projects[i].type+`</p>
+                        </div>
+                    </div>
+                </div>
+		`);
+		$("style#bgimgs").append(`
+			.bgimg`+i+`:before
+			{
+				background-image:url(img/portfolio/`+bgimg+`);
+			}
+		`)
+}
 // function writeToFile()
 // {
 // 	var fso=new ActiveXObject("Scripting.FileSystemObject");

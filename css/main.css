@@ -442,7 +442,7 @@ a.button:hover:before
 {
 	width:100%;
 	margin:0 auto;
-	margin-top:40px;
+	/*margin-top:40px;*/
 	position:relative
 	/* padding: 0 30.2px; */
 }
@@ -474,7 +474,7 @@ a.button:hover:before
 {
 	
 	width: 100%;
-	height: 400px;
+	/*height: 400px;*/
 	padding:10px;
 	margin:0 auto;
 	position: relative;
@@ -491,12 +491,12 @@ a.button:hover:before
 	left:0;
 	width: 100%;
 	height: 100%;
-	background:rgba(0,0,0,0);
+	/*background:rgba(0,0,0,0);*/
 	transition: 0.3s ease;
 }
 #portfolio .proj-list .proj-item .proj-img:before
 {
-	background:url(../img/portfolio/1.png);
+	/*background:url(../img/portfolio/1.png);*/
 	background-size: cover;
 	background-position: center center;
 }
