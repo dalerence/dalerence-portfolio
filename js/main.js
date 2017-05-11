@@ -120,10 +120,12 @@ $(window).load(function(){
 
 });
 $(window).resize(function(){
-	changeItemHeight();
+	var itemwidth=$("#portfolio .proj-item .proj-img").width();
+	itemwidth = itemwidth * 0.875;
+	$("#portfolio .proj-item .proj-img").height(itemwidth);
 })
 
-var randArray=projects;
+var randArray=projects.slice();
 var loops=0;
 var rand;
 $("head").append("<style id='bgimgs'></style>");
@@ -149,12 +151,12 @@ for(i=projects.length;i>0;i--){
 
 function loadProject(i)
 {
-		var bgimg = i+".png";
+		var bgimg = (i+1)+".png";
 		$(".proj-list").append(`
-				<div class="proj-item `+projects[i].category+`">
+				<div class="proj-item `+projects[i].category+`" target=`+i+`>
                     <div class="proj-img bgimg`+i+`">
         			    <div class="details">
-                       		<h3 class="title">`+projects[i].title.toUpperCase()+`</h3>
+                       		<h3 class="title">`+projects[i].title+`</h3>
                             <p class="category">`+projects[i].type+`</p>
                         </div>
                     </div>
@@ -167,6 +169,32 @@ function loadProject(i)
 			}
 		`)
 }
+
+$(".proj-item").click(function(){
+	var targetID = $(this).attr("target");
+	var targetImg = parseInt(targetID+1);
+	$(".desc-modal .heading").html(projects[targetID].title);
+	$(".desc-modal .desc-details p").html(projects[targetID].desc);
+	$(".desc-modal a#url").attr("web-target",projects[targetID].link);
+	$(".desc-modal img").attr("src","img/portfolio/"+targetImg+".png");
+	
+	if(projects[targetID].category=="graphics")
+	{
+		$(".desc-modal a#url").hide();
+	}
+	else
+	{
+		$(".desc-modal a#url").show()
+	}
+	$(".desc-modal").delay(300).fadeIn();
+});
+$(".desc-modal a#url").click(function(){
+	var link = window.open($(this).attr("web-target"));
+	link.focus();
+})
+$(".desc-modal a#cancel").click(function(){
+	$(".desc-modal").fadeOut();
+})
 // function writeToFile()
 // {
 // 	var fso=new ActiveXObject("Scripting.FileSystemObject");
