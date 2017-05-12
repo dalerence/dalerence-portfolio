@@ -279,10 +279,15 @@ title
 {
 	padding:0 40px;
 	overflow: scroll;
-	height: calc(100% - 278px)
+	height: calc(100% - 278px);
+	margin-right: -20px !important;
+	 overflow-y: scroll;
+	 overflow-x: hidden;
 }
 #about .about-desc::-webkit-scrollbar,
-#portfolio .proj-list-container::-webkit-scrollbar
+#about .about-desc::-moz-scrollbar,
+#portfolio .proj-list-container::-webkit-scrollbar,
+#portfolio .proj-list-container::-moz-scrollbar
 {
 	display: none;
 }
@@ -670,4 +675,21 @@ a.button:hover:before
 .desc-modal .desc-box img
 {
 	margin:0 auto;
+}
+.desc-modal table tr td
+{
+	width: 30%;
+	color:#ece240;
+	font-size: 20px;
+	padding:10px 0;
+}
+.desc-modal table tr td:last-child
+{
+	width: 60%;
+	color:white;
+}
+.desc-modal table tr td:nth-child(2)
+{
+	text-align: center;
+	width: 10%;
 }

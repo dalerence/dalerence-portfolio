@@ -172,20 +172,27 @@ function loadProject(i)
 
 $(".proj-item").click(function(){
 	var targetID = $(this).attr("target");
-	var targetImg = parseInt(targetID+1);
+	var targetImg = parseInt(targetID)+1;
 	$(".desc-modal .heading").html(projects[targetID].title);
-	$(".desc-modal .desc-details p").html(projects[targetID].desc);
+	$(".desc-modal #txtdesc").html(projects[targetID].desc);
+	$(".desc-modal #txtmethod").html(projects[targetID].method);
+	$(".desc-modal #txttools").html(projects[targetID].tools);
+	$(".desc-modal #txtresponsive").html(projects[targetID].responsive);
 	$(".desc-modal a#url").attr("web-target",projects[targetID].link);
 	$(".desc-modal img").attr("src","img/portfolio/"+targetImg+".png");
 	
 	if(projects[targetID].category=="graphics")
 	{
-		$(".desc-modal a#url").hide();
+		$(".desc-modal a#url,.desc-modal .forweb").hide();
+		$("#weborgraphics").html("Tools/Software Used")
 	}
 	else
 	{
-		$(".desc-modal a#url").show()
+		$(".desc-modal a#url,.desc-modal .forweb").show()
+		$("#weborgraphics").html("Languages Used")
 	}
+
+
 	$(".desc-modal").delay(300).fadeIn();
 });
 $(".desc-modal a#url").click(function(){

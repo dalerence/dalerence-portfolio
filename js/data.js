@@ -1,4 +1,35 @@
+// Categories
+	// web,graphics,others
+
 var projects = [
-		{category:"web",title:"the marinus",desc:"Lorem a12 lawdo  wodjapjd  ojwo  wowp", type:"website",link:"http://themarinus.com"},
-		{category:"graphics",title:"juvair",desc:"Lorem a12 lawdo  wodjapjd  ojwo  wowp", type:"website",link:"http://facebook.com"}
+		{
+			category:"web",
+			title:"the marinus",
+			desc:"Korean Website",
+			method:"PSD to HTML",
+			tools:"HTML, CSS and JavaScript",
+			responsive:"Yes",
+			type:"website",
+			link:"http://themarinus.com"
+		},
+		{
+			category:"web",
+			title:"Juvair",
+			desc:"Company Marketing Website (Oxyple, Oxunit and Oxycombi)",
+			method:"PSD to HTML",
+			tools:"HTML, CSS and JavaScript",
+			responsive:"Yes",
+			type:"website",
+			link:"http://juvair.com"
+		},
+		{
+			category:"web",
+			title:"Coone",
+			desc:"Korean Website",
+			method:"PSD to HTML",
+			tools:"HTML, CSS and JavaScript",
+			responsive:"Yes",
+			type:"website",
+			link:"http://coone.co.kr"
+		}
 ]
