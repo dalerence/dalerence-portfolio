@@ -142,16 +142,16 @@ section.active.ribbon-lb:after {
 }
 .menubar #menuList
 {
-	position: absolute;
-    top: -117.4px;
+	/*position: absolute;*/
+    /*top: -117.4px;*/
     right: 0;
     overflow: hidden;
-    height: 111px;
+    height: 105px;
     width: 100px;
 }
 .menubar #menuList ul
 {
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     right: 0;
 }
@@ -284,6 +284,7 @@ title
 	 overflow-y: scroll;
 	 overflow-x: hidden;
 }
+
 #about .about-desc::-webkit-scrollbar,
 #about .about-desc::-moz-scrollbar,
 #portfolio .proj-list-container::-webkit-scrollbar,
@@ -405,7 +406,10 @@ a.button:hover:before
 {
 	position:relative;
     overflow: auto;
-    height: 80vh;
+    height: calc(100vh - 154px);
+    margin-right: -20px !important;
+	 overflow-y: scroll;
+	 overflow-x: hidden;
 }
 #portfolio .desc-container
 {
@@ -474,6 +478,7 @@ a.button:hover:before
 {
 	/* float:left; */
 	 width:20%; 
+
 }
 #portfolio .proj-list .proj-item .proj-img
 {
@@ -507,15 +512,20 @@ a.button:hover:before
 }
 #portfolio .proj-list .proj-item .proj-img:hover:after
 {
-	background:rgba(0,0,0,0.3);
+	background:rgba(0,0,0,0.5);
 }
 #portfolio .proj-list .proj-item .proj-img:hover:before
 {
 	transform: scale(1.1)
 }
-#portfolio .proj-list .proj-item .proj-img:hover .details
+#portfolio .proj-list .proj-item .details
 {
+	transform:translateX(-100%);
 	background:rgba(0,0,0,1);
+}
+#portfolio .proj-list .proj-item:hover .details
+{
+	transform:translateX(0);
 }
 #portfolio .proj-nav
 {
@@ -538,11 +548,11 @@ a.button:hover:before
 	inline-block;
 	margin:0 auto;
 	text-align:center;
-	padding-bottom:20px;
+	padding-bottom:15px;
 }
 #portfolio .heading
 {
-	margin:20px 0; 
+	margin:15px 0; 
 }
 #portfolio .proj-menu li
 {
@@ -585,7 +595,7 @@ a.button:hover:before
     padding: 5px 10px;
     padding-bottom: 15px;
     z-index: 2;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     transition: 0.3s;
 }
 #portfolio .proj-img .details h3
@@ -681,7 +691,7 @@ a.button:hover:before
 	width: 30%;
 	color:#ece240;
 	font-size: 20px;
-	padding:10px 0;
+	padding:5px 0;
 }
 .desc-modal table tr td:last-child
 {

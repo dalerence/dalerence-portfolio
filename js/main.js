@@ -14,6 +14,7 @@ else
 var clicked=false;
 $("#menuList a").click(function(e){
 	e.preventDefault();
+	$(".desc-modal").fadeOut(500);
 	var idlink=$(this).parent();
 	var link=$(this).html();
 	if(!clicked){
@@ -114,8 +115,7 @@ $(window).load(function(){
 	$("#portfolio .proj-item .proj-img").height(itemwidth);
 	var items = $(".proj-list")
 	items.isotope({
-	  itemSelector: '.proj-item',
-	  stagger: 30
+	  itemSelector: '.proj-item'
 	});
 
 });
@@ -193,7 +193,7 @@ $(".proj-item").click(function(){
 	}
 
 
-	$(".desc-modal").delay(300).fadeIn();
+	$(".desc-modal").fadeIn();
 });
 $(".desc-modal a#url").click(function(){
 	var link = window.open($(this).attr("web-target"));
