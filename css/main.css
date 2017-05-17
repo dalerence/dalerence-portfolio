@@ -339,7 +339,7 @@ title
 	display: block;
 	margin:0 auto;
 }
-input[type=text]
+input[type=text],textarea
 {
 	background:transparent;
 	border:0;
@@ -702,4 +702,35 @@ a.button:hover:before
 {
 	text-align: center;
 	width: 10%;
+}
+#contact input,textarea
+{
+	max-width: none;
+	text-align: left;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+.contact-box
+{
+	position: absolute;
+	top:40%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+.contact-box .heading
+{
+	margin-bottom: 30px;
+}
+#contact button
+{
+	float:left;
+}
+#contact li
+{
+	display: inline-block;
+}
+#contact .contact-title
+{
+	display: block;
+	margin:0 auto;
 }
