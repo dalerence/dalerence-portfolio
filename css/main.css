@@ -710,10 +710,14 @@ a.button:hover:before
 	margin-bottom: 20px;
 	font-size: 20px;
 }
+textarea
+{
+	height: 300px;
+}
 .contact-box
 {
 	position: absolute;
-	top:40%;
+	top:50%;
 	transform: translateY(-50%);
 	width: 100%;
 }
