@@ -228,7 +228,7 @@ $("#submit").click(function(){
 		console.log("pasok")
 		var data=$("#inputs").serialize();
 		$.ajax({
-		    url:'http://darencedesigns.000webhostapp.com/this.php',
+		    url:'https://darencedesigns.000webhostapp.com/this.php',
 		    type:'post',
 		    data:data,
 		    // dataType: 'jsonp', // use JSONP
