@@ -211,3 +211,33 @@ $(".desc-modal a#cancel").click(function(){
 
 // }
 // writeToFile();
+var goodInput=false;
+$("#submit").click(function(){
+	$("#contact input").each(function(){
+		if(!$(this)[0].checkValidity())
+		{
+			$("button[type=submit]").click();
+		}
+		else
+		{
+			goodInput=true;
+		}
+	});
+	if(goodInput==true)
+	{
+		console.log("pasok")
+		var data=$("#inputs").serialize();
+		$.ajax({
+		    url:'http://darencedesigns.000webhostapp.com/this.php',
+		    type:'post',
+		    data:data,
+		    // dataType: 'jsonp', // use JSONP
+		    success: function(result){
+		        // $('.abcClass').html(result);
+		        console.log("SENT")
+		        },
+		    error:function(exception){console.log(exception);}
+		    });
+	}
+})
+	

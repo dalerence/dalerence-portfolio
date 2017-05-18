@@ -734,3 +734,7 @@ a.button:hover:before
 	display: block;
 	margin:0 auto;
 }
+#contact button
+{
+	display: none;
+}
