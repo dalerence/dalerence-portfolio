@@ -211,19 +211,21 @@ $(".desc-modal a#cancel").click(function(){
 
 // }
 // writeToFile();
-var goodInput=false;
+var goodInput=0;
 $("#submit").click(function(){
-	$("#contact input").each(function(){
-		if(!$(this)[0].checkValidity())
+	$("#contact input,#contact textarea").each(function(){
+		if($(this)[0].checkValidity())
 		{
-			$("button[type=submit]").click();
+			goodInput+=1;
+			
+			console.log(goodInput)
 		}
 		else
 		{
-			goodInput=true;
+			$("button[type=submit]").click();
 		}
 	});
-	if(goodInput==true)
+	if(goodInput==4)
 	{
 		console.log("pasok")
 		var data=$("#inputs").serialize();
@@ -238,6 +240,13 @@ $("#submit").click(function(){
 		        },
 		    error:function(exception){console.log(exception);}
 		    });
+		goodInput=0;
+		$("#inputs").fadeOut();
+		$("#confirmation").fadeIn();
+	}
+	else
+	{
+		goodInput=0;
 	}
 })
 	

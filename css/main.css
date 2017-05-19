@@ -339,17 +339,20 @@ title
 	display: block;
 	margin:0 auto;
 }
-input[type=text],textarea
+input,textarea
 {
 	background:transparent;
 	border:0;
 	outline: 0;
-	border-bottom:2px solid white;
+	border-bottom:1px solid #eee;
 	text-align: center;
 	width:100%;
 	max-width: 300px;
 	color:#ece240;
+	position: relative;
 }
+
+
 a.button
 {
 	text-decoration: none;
@@ -712,7 +715,7 @@ a.button:hover:before
 }
 textarea
 {
-	height: 300px;
+	height: 200px;
 }
 .contact-box
 {
@@ -720,6 +723,7 @@ textarea
 	top:50%;
 	transform: translateY(-50%);
 	width: 100%;
+	transition: 0.3s;
 }
 .contact-box .heading
 {
@@ -741,4 +745,13 @@ textarea
 #contact button
 {
 	display: none;
+}
+#confirmation
+{
+	color:white;
+	/*position: absolute;*/
+	text-align: center;
+	width: 100%;
+	display: none;
+	height: 50px;
 }

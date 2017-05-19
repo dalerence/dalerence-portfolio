@@ -205,20 +205,26 @@
 	    				</div>
     				</div>
     				<div class="col-sm-6">
-    					<form id="inputs">
-	    					<div class="has-line line-right from-right">
-	    						<p>Name:</p>
-	    						<input type="text" id="txtname" name="name" placeholder="Enter your name" required="required">
-		    					<p>Email</p>
-		    					<input type="text" id="txtemail" name="email" placeholder="Enter your email" required="required">
-		    					<p>Contact</p>
-		    					<input type="text" id="txtnumber" name="contact" placeholder="Enter your phone no." required="required">
-		    					<p>Message</p>
-		    					<textarea id="txtmsg" name="msg" required="required" placeholder="Enter your message"></textarea >
-		    					<a id="submit" href="#" class="button">Submit</a>
-		    					<button type="submit" class="button">Submit</button>
+    					<div class="has-line line-right from-right">
+	    					<div id="confirmation">
+	    						<h3>Email has been sent</h3>
+	    						<p><i>Thank you for your message!</i></p>
 	    					</div>
-    					</form>
+	    					<form id="inputs">
+		    					
+		    						<p>Name:</p>
+		    						<input type="text" id="txtname" name="name" placeholder="Enter your name" required="required">
+			    					<p>Email</p>
+			    					<input type="email" id="txtemail" name="email" placeholder="Enter your email" required="required">
+			    					<p>Contact</p>
+			    					<input type="text" id="txtnumber" name="contact" placeholder="Enter your phone no." required="required">
+			    					<p>Message</p>
+			    					<textarea id="txtmsg" name="msg" required="required" placeholder="Enter your message"></textarea >
+			    					<a id="submit" href="#" class="button">Submit</a>
+			    					<button type="submit" class="button">Submit</button>
+		    					
+	    					</form>
+    					</div>
     				</div>
     				
     			</div>
