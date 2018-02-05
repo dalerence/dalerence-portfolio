@@ -12,8 +12,9 @@ else
 }
 
 var clicked=false;
-$("#menuList a").click(function(e){
+$(".menuList a").click(function(e){
 	e.preventDefault();
+	toggle();
 	$(".desc-modal").fadeOut(500);
 	var idlink=$(this).parent();
 	var link=$(this).html();
@@ -26,7 +27,7 @@ $("#menuList a").click(function(e){
 			$("section.exit").removeClass("exit")
 			$("section.active").removeClass("active")
 			$(target).addClass("active")
-			$("#menuList li.active").removeClass("active");
+			$(".menuList li.active").removeClass("active");
 			idlink.addClass("active")
 			$("title").html("Darence Designs | "+ link)
 		},3000)
@@ -249,4 +250,20 @@ $("#submit").click(function(){
 		goodInput=0;
 	}
 })
+
+var dswitch = false;
+$(".menuToggler").click(function(){
+	toggle();
+})
+function toggle(){
+	$(".menuToggler").toggleClass("active");
+	if(!dswitch){
+		$(".menuList").stop().addClass("active").fadeIn();
+	}
+	else
+	{
+		$(".menuList").stop().removeClass("active").fadeOut();
+	}
 	
+	dswitch = !dswitch
+}
