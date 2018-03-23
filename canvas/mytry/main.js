@@ -106,7 +106,7 @@ var ballArray;
 var text;
 function init(){
     ballArray = [];
-    for(var i = 0; i < 800; i++){
+    for(var i = 0; i < 300; i++){
         var radius =5;
         var x = randomIntFromRange(radius , window.innerWidth - radius)
         var y = randomIntFromRange(radius , window.innerHeight - radius)
