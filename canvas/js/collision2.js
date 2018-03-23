@@ -188,8 +188,8 @@ function Particle(x, y, dx, dy, radius,color){
 let particles;
 function initiate(){
    particles = []
-   for(let i = 0; i < 400; i++){
-       const radius = randomIntFromRange(5,20);
+   for(let i = 0; i < 100; i++){
+       const radius = randomIntFromRange(10,20);
        const color = randomColor();
        let x = randomIntFromRange(radius, canvas.width - radius);
        let y = randomIntFromRange(radius, canvas.height - radius);
