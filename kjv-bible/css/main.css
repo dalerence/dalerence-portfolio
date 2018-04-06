@@ -1,0 +1,292 @@
+@font-face {
+    font-family: GothicRegular;
+    src: url(../fonts/GOTHIC.TTF);
+}
+@font-face {
+    font-family: GothicBold;
+    src: url(../fonts/GOTHICB.TTF);
+}
+*{
+    user-select: none;
+}
+body{
+    margin:0;
+    background: black;
+}
+.container{
+    width: 1024px;
+    height: 768px;
+    margin:0 auto;
+    padding: 0 80px;
+    padding-top:53px;
+    background:url(../img/background.png);
+}
+.nav-container{
+    width: 227px;
+    /*height: 584px;*/
+    padding-bottom: 30px;
+    background: url(../img/sidenav-bg.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: 0 -34px;
+    position: relative;
+    margin-top:30px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+        box-shadow: 0 0 131px 19px rgba(0,0,0,0.75);
+    z-index: 12;
+    
+}
+.sidenav{
+    position: relative;
+    display: inline-block;
+}
+.signature{
+    position: absolute;
+    bottom: -31px;
+    left: 40px;
+    z-index: 30;
+    font-family: "GothicBold",sans-serif;
+
+}
+.sidenav > ul{ position: relative; }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.sidenav > ul > li{
+    /*position: absolute;*/
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 1;
+    /*display: none*/
+}
+.sidenav > ul > li.active{
+    display: inline-block;
+    z-index: 9;
+}
+.tab-nums li{
+    display: inline-block;
+    position: relative;
+    height: 34px;
+    width: 45px;
+}
+.tab-nums li a{
+    position: absolute;
+    top:0;
+    height: 34px;
+    width: 45px;
+    background:#3a3a3a;
+    box-shadow: 0 -131px 131px 19px rgba(0,0,0,0.75);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    left:0;
+    text-decoration: none;
+    font-family: "GothicBold",sans-serif;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    line-height: 34px;
+    transition:0.3s;
+    color:#a7a7a7;
+}
+.sidenav > ul > li.active .nav-container{
+
+}
+.sidenav .nav-container .tab-nums{
+    position: absolute;
+    top:-34px;
+    height: 34px;
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+
+.sidenav .nav-container .tab-nums li.active a,
+.sidenav .nav-container .tab-nums li:not(.active) a:hover
+{
+    color:#76b0ff;
+    text-shadow: 0 0 300px rgba(88,71,255,1),
+                0 0 11px rgba(109,147,255,1),
+                0 0 11px rgba(109,147,255,1);
+    z-index: 9;
+    background: url(../img/sidenav-bg.png);
+}
+.sidenav .nav-container .tab-nums li:not(.active) a:hover{
+    background:#3a3a3a;
+}
+.sidenav .nav-container .tab-nums li a[target="#menu2"]{
+    background-position: -55px 0;
+}
+.sidenav .nav-container .tab-nums li a[target="#menu3"]{
+    background-position: -105px 0;
+}
+.sidenav #nav-2 .nav-container .tab-nums a{
+    left:50px;
+}
+.sidenav #nav-2 .nav-container:after{
+    left:50px;
+}
+.sidenav .nav-container p.instruction{
+    color:white;
+    font-family: "GothicRegular",sans-serif;
+    font-size:12px;
+}
+.sidenav .nav-container .header{
+    padding:20px 30px;
+    padding-bottom:0;
+    padding-right: 0;
+}
+.sidenav .nav-container .header .title{
+    height: 0;
+    width: 100%;
+    padding-left: 10px;
+    margin-left: -10px;
+    transition:0.3s;
+    margin-top:15px;
+    margin-bottom:-10px;
+    overflow:hidden;
+    padding-top:4px;
+}
+.sidenav .nav-container .header a{
+    color:#6e6e6e;
+    font-family: "GothicBold",sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    /*display: none;*/
+    margin-left: -20px;
+}
+.sidenav .nav-container .header a img{
+    margin-right: 10px;
+}
+.sidenav .nav-container .header h3{
+    font-size: 18px;
+    font-family: "GothicBold",sans-serif;
+    text-transform: uppercase;
+    margin:0;
+    color:#76b0ff;
+    height: 0;
+}
+.blue-glow{
+    color:#76b0ff;
+    text-shadow: 0 0 20px rgba(88,71,255,1),
+                0 0 15px rgba(109,147,255,1);
+    transition: 0.3s;
+
+}
+.sidenav .nav-container .items-con{
+    background: #161616;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.sidenav .nav-container .items-con:after,
+.sidenav .nav-container .items-con:before{
+    position: absolute;
+    left:0;
+    width: 100%;
+}
+.sidenav .nav-container .items-con:after{
+    content:url(../img/books-con-bottom.png);
+    bottom:0;
+}
+.sidenav .nav-container .items-con:before{
+    content:url(../img/books-con-top.png);
+    top:0;
+}
+.sidenav .nav-container .items-con ul{
+    padding:0;
+    padding-top:15px;
+    margin:0 auto;
+    position: absolute;
+    left:0;
+    top:2px;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 493px;
+    box-sizing: border-box;
+    width: calc(100% + 17px);
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+}
+.sidenav .nav-container ul:not(.tab-nums)  li{
+    display: block;
+    list-style: none;
+    margin:5px auto;
+    width: 166px;
+    text-align: center;
+    z-index: 0;
+    position: relative;
+    box-shadow: 0 0 29px 0 rgba(0,0,0,0.6)
+}
+.sidenav .nav-container ul:not(.tab-nums)  li:last-child{
+    margin-bottom: 50px
+}
+.sidenav .nav-container ul:not(.tab-nums) li a{
+    line-height: 31px;
+    height: 31px;
+    display: inline-block;
+    text-align:center;
+    text-decoration: none;
+    font-family: "GothicBold",sans-serif;
+    font-size: 14px;
+    color:#939393;
+    border-radius: 5px;
+    background: #2f2f2f;
+    width: 100%;
+    transition: 0.3s;
+    z-index: 1;
+    text-transform: uppercase;
+}
+.sidenav .nav-container ul:not(.tab-nums)  li.active,
+.sidenav .nav-container ul:not(.tab-nums)  li:hover{
+    z-index: 9;
+}
+.sidenav .nav-container ul:not(.tab-nums)  li.active a,
+.sidenav .nav-container ul:not(.tab-nums)  li a:hover{
+    background: #76b0ff;
+    color:black;
+    box-shadow: 0 0 21px 10px rgba(88,71,255,0.24),
+                0 0 5px 1px rgba(109,147,255,0.43);
+    z-index: 9;
+}
+
+.sidenav .nav-container .chapnav ul,
+.sidenav .nav-container .versenav ul{
+    height: calc(100% - 8px);
+}
+.sidenav .nav-container .chapters li,
+.sidenav .nav-container .verses li{
+    float:left;
+    width: calc(20% - 4px) !important;
+    margin:2px !important;
+}
+.sidenav .nav-container .items-con ul.chapters,
+.sidenav .nav-container .items-con ul.verses{
+    display: none;
+}
+
+.back{
+    display: inline-block;
+    opacity: 0;
+    transition: 0.3s;
+    margin-left:-10px;
+}
+.back:hover{
+    color:#76b0ff !important;
+    text-shadow: 0 0 20px rgba(88,71,255,1),
+                0 0 15px rgba(109,147,255,1);
+}
+.text.active{
+    display: block;
+}
+.text{
+    display: none;
+}
