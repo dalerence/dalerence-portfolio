@@ -6,20 +6,22 @@
     font-family: GothicBold;
     src: url(../fonts/GOTHICB.TTF);
 }
-*{
+h3,h1,a,p{
     user-select: none;
 }
-body{
+body,html{
     margin:0;
-    background: black;
+    position: relative;
+    background:url(../img/background.png);
+    overflow: hidden;
 }
 .container{
+    position: relative;
     width: 1024px;
-    height: 768px;
+    height: 100vh;
     margin:0 auto;
     padding: 0 80px;
     padding-top:53px;
-    background:url(../img/background.png);
 }
 .nav-container{
     width: 227px;
@@ -44,10 +46,33 @@ body{
 .signature{
     position: absolute;
     bottom: -31px;
-    left: 40px;
+    left: 50%;
+    transform:translateX(-50%);
     z-index: 30;
     font-family: "GothicBold",sans-serif;
-
+    text-align: center;
+    white-space: nowrap;
+}
+.signature:after{
+    content:"";
+    position: absolute;
+    top:0;
+    right:-3px;
+    height: 100%;
+    width: 2px;
+    background: white;
+    animation:blink 0.8s infinite forwards;
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .sidenav > ul{ position: relative; }
 .clearfix::after {
@@ -226,6 +251,28 @@ body{
     position: relative;
     box-shadow: 0 0 29px 0 rgba(0,0,0,0.6)
 }
+.sidenav .nav-container ul.books:not(.tab-nums)  li:nth-child(1):after,
+.sidenav .nav-container ul.books:not(.tab-nums)  li:nth-child(40):after{
+    content:"New Testament";
+    position: absolute;
+    top:-25px;
+    left:0;
+    width: 100%;
+    font-size: 14px;
+    color:#76b0ff;
+    text-shadow: 0 0 50px rgba(88,71,255,0.6), 0 0 20px rgba(109,147,255,1);
+    font-family: "GothicBold",sans-serif;
+    text-align: center;
+}
+
+.sidenav .nav-container ul.books:not(.tab-nums)  li:nth-child(1):after{
+    content:"Old Testament";
+}
+.sidenav .nav-container ul.books:not(.tab-nums)  li:nth-child(1),
+.sidenav .nav-container ul.books:not(.tab-nums)  li:nth-child(40){
+    margin-top:40px;
+    position: relative;
+}
 .sidenav .nav-container ul:not(.tab-nums)  li:last-child{
     margin-bottom: 50px
 }
@@ -290,3 +337,161 @@ body{
 .text{
     display: none;
 }
+.header-con{
+    position:absolute;
+    top: 77px;
+    right: 220px;
+}
+.text-preview h3,
+.text-preview p,
+.header-con h3,
+.header-con h1{
+    font-family: "GothicRegular",sans-serif;
+    color:#76b0ff ;
+    text-shadow: 0 0 50px rgba(88,71,255,0.6),
+                0 0 20px rgba(109,147,255,1);
+    margin:0;
+}
+.header-con h3{
+    font-size:31.74px;
+}
+.header-con h1{
+    font-size:90px;
+}
+.text-preview{
+    background-image: url(../img/text-preview.png);
+    /*background-size:100% 100%;*/
+    padding:130px;
+    width: 603px;
+    height: 427px;
+    position: absolute;
+    top: 140px;
+    right: 84px;
+}
+.text-preview p{
+    padding:12px 15px;
+    font-size: 14px;
+    font-family: "GothicBold",sans-serif;
+}
+.text-preview .content{
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.text-preview h3{
+    user-select: auto;
+    cursor:auto;
+    font-size: 20px;
+    color:white;
+}
+.text-preview h3::selection{
+    background-color:rgba(0,0,0,0.3);
+    color:#76b0ff;
+    box-shadow: 0 0 50px rgba(88,71,255,0.6),
+                0 0 20px rgba(109,147,255,1);
+}
+.button-con{
+    position: absolute;
+    top: 710px;
+    right: 212px;
+}
+.button-con a:hover:after,
+.button-con a:hover:before{
+    width: 90%;
+}
+.button-con a:hover{
+    background: #76b0ff;
+    color: black;
+    /*border:1px solid rgba(255,255,255,1);*/
+    /*border-left-color: transparent;*/
+    /*border-right-color: transparent;*/
+    box-shadow: 0 0 21px 10px rgba(88,71,255,0.24), 0 0 5px 1px rgba(109,147,255,0.43);
+    z-index: 9;
+}
+.button-con a:before,
+.button-con a:after{
+    content:"";
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    height: 1px;
+    width: 0;
+    background: white;
+    transition: 0.3s;
+}
+.button-con a:before{
+    top:0;
+}
+.button-con a:after{
+    bottom:0;
+}
+.button-con a{
+    border:1px solid transparent;
+    display: inline-block;
+    height: 31px;
+    line-height: 31px;
+    width:166px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: "GothicBold",sans-serif;
+    font-size: 14px;
+    color: #939393;
+    border-radius: 5px;
+    background: #2f2f2f;
+    transition: 0.3s;
+    z-index: 1;
+    text-transform: uppercase;
+} 
+.projection{
+    background-image: url(../img/project.png);
+    background-size: cover;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    cursor:none;
+}
+.projection .text-con{
+    position: absolute;
+    top:50%;
+    left:50%;
+    box-sizing: border-box;
+    padding:0 50px;
+    max-width: 1200px;
+    width: 100%;
+    transform: translate(-50%,calc(-50% - 50px));
+}
+.projection h3,.projection p,.projection span{
+    font-family: "GothicRegular",sans-serif;
+    color:white;
+    text-shadow: 0 0 200px black, 0 0 150px black,0 0 100px black,0 0 50px black;
+    margin:0;
+    text-align: center;
+ }
+ .projection p{
+     font-size:30px;
+ }
+ .projection h3{
+     font-size:53px;
+ }
+ .projection span{
+    position: absolute;
+    left:10px;
+    bottom:10px;
+    font-size: 30px;
+    user-select: none;
+ }
+  .projection h3 div{
+    position:absolute;
+    display:block;
+    width:100%;
+    height:100%;
+ }
