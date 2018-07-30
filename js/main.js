@@ -245,7 +245,7 @@ $("#submit").click(function(){
 			from_name:$("#txtname").val(),
 			reply_to:$("#txtemail").val(),
 			message_html:$("#txtmsg").val(),
-			contact_number:$("#txtcontact")
+			contact_number:$("#txtnumber").val()
 		}
 		var serviceID = 'gmail';
 		var templateID = 'template_dtcsmxv8';
