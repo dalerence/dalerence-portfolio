@@ -29,6 +29,8 @@ $(document).ready(function(){
         // console.log(text)
         setActiveText();
         loadDatas();
+    }else{
+        $(".tab-nums li:nth-child(1) a").click()
     }
 
 
