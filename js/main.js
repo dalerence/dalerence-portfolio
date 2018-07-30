@@ -244,7 +244,7 @@ $("#submit").click(function(){
 		var templateParams = {
 			from_name:String($("#txtname").val()),
 			reply_to:$("#txtemail").val(),
-			message_html:$("#txtmsg").val(),
+			message_html:$("#txtmsg").val(), 
 			contact_number:String($("#txtnumber").val())
 		} 
 		var serviceID = 'gmail';
