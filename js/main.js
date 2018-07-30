@@ -242,7 +242,7 @@ $("#submit").click(function(){
 		//     error:function(exception){console.log(exception);}
 		//     })
 		var templateParams = {
-			from_name:$("#txtname").val(),
+			name:$("#txtname").val(),
 			reply_to:$("#txtemail").val(),
 			message_html:$("#txtmsg").val(), 
 			contact_number:String($("#txtnumber").val())
