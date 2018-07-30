@@ -249,7 +249,7 @@ $("#submit").click(function(){
 		}
 		var serviceID = 'gmail';
 		var templateID = 'template_dtcsmxv8';
-		var userID = 'user_agyb3ECTLwESEJMzaQ1E1';
+		var userID = 'user_agyb3ECTLwESEJMzaQ1E1'; 
 		emailjs.send(serviceID, templateID, templateParams, userID);
 		goodInput=0;
 		$("#inputs").fadeOut();
