@@ -242,10 +242,10 @@ $("#submit").click(function(){
 		//     error:function(exception){console.log(exception);}
 		//     })
 		var templateParams = {
-			from_name:$("#txtname").val(),
+			from_name:String($("#txtname").val()),
 			reply_to:$("#txtemail").val(),
 			message_html:$("#txtmsg").val(),
-			contact_number:$("#txtnumber").val()
+			contact_number:String($("#txtnumber").val())
 		} 
 		var serviceID = 'gmail';
 		var templateID = 'template_dtcsmxv8';
