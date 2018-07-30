@@ -242,12 +242,12 @@ $("#submit").click(function(){
 		//     error:function(exception){console.log(exception);}
 		//     })
 		var templateParams = {
-			from_name:String($("#txtname").val()),
+			from_name:$("#txtname").val(),
 			reply_to:$("#txtemail").val(),
 			message_html:$("#txtmsg").val(), 
 			contact_number:String($("#txtnumber").val())
 		}  
-		console.log(templateParams[0].from_name) 
+		// console.log(templateParams[0].from_name) 
 		var serviceID = 'gmail';
 		var templateID = 'template_dtcsmxv8';
 		var userID = 'user_agyb3ECTLwESEJMzaQ1E1'; 
