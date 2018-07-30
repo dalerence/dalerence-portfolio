@@ -246,7 +246,7 @@ $("#submit").click(function(){
 			reply_to:$("#txtemail").val(),
 			message_html:$("#txtmsg").val(),
 			contact_number:$("#txtnumber").val()
-		}
+		} 
 		var serviceID = 'gmail';
 		var templateID = 'template_dtcsmxv8';
 		var userID = 'user_agyb3ECTLwESEJMzaQ1E1'; 
