@@ -247,6 +247,7 @@ $("#submit").click(function(){
 			message_html:$("#txtmsg").val(), 
 			contact_number:String($("#txtnumber").val())
 		} 
+		console.log(templateParams[0].from_name)
 		var serviceID = 'gmail';
 		var templateID = 'template_dtcsmxv8';
 		var userID = 'user_agyb3ECTLwESEJMzaQ1E1'; 
