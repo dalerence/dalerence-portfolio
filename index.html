@@ -229,10 +229,10 @@
 		    						<input type="text" id="txtname" name="name" placeholder="Enter your name" required="required">
 			    					<p>Email</p>
 			    					<input type="email" id="txtemail" name="email" placeholder="Enter your email" required="required">
-			    					<p>Contact</p>
+			    					<p>Contact No.</p>
 			    					<input type="text" id="txtnumber" name="contact" placeholder="Enter your phone no." required="required">
 			    					<p>Message</p>
-			    					<textarea id="txtmsg" name="msg" required="required" placeholder="Enter your message"></textarea >
+			    					<textarea id="txtmsg" name="txtmsg" required="required" placeholder="Enter your message"></textarea >
 			    					<a id="submit" href="#" class="button">Submit</a>
 			    					<button type="submit" class="button">Submit</button>
 		    					
@@ -245,15 +245,19 @@
     	</div>
     </section>
 
-
+    
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
     <script src="js/vendor/owl.carousel.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/isotope.js"></script>
     <script src="js/data.js"></script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
+       (function(){
+          emailjs.init("user_agyb3ECTLwESEJMzaQ1E1");
+       })();
     </script>
+    <script src="js/main.js"></script>
 
     </body>
 </html>

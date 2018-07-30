@@ -229,18 +229,28 @@ $("#submit").click(function(){
 	if(goodInput==4)
 	{
 		console.log("pasok")
-		var data=$("#inputs").serialize();
-		$.ajax({
-		    url:'https://darencedesigns.000webhostapp.com/this.php',
-		    type:'post',
-		    data:data,
-		    // dataType: 'jsonp', // use JSONP
-		    success: function(result){
-		        // $('.abcClass').html(result);
-		        console.log("SENT")
-		        },
-		    error:function(exception){console.log(exception);}
-		    });
+		// var data=$("#inputs").serialize();
+		// $.ajax({
+		//     url:'https://darencedesigns.000webhostapp.com/this.php',
+		//     type:'post',
+		//     data:data,
+		//     // dataType: 'jsonp', // use JSONP
+		//     success: function(result){
+		//         // $('.abcClass').html(result);
+		//         console.log("SENT")
+		//         },
+		//     error:function(exception){console.log(exception);}
+		//     })
+		var templateParams = {
+			from_name:$("#txtname").val(),
+			reply_to:$("#txtemail").val(),
+			message_html:$("#txtmsg").val(),
+			contact_number:$("#txtcontact")
+		}
+		var serviceID = 'gmail';
+		var templateID = 'template_dtcsmxv8';
+		var userID = 'user_agyb3ECTLwESEJMzaQ1E1';
+		emailjs.send(serviceID, templateID, templateParams, userID);
 		goodInput=0;
 		$("#inputs").fadeOut();
 		$("#confirmation").fadeIn();
