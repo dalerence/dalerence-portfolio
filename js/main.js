@@ -278,6 +278,3 @@ function toggle(){
 	
 	dswitch = !dswitch
 }
-$(window).ready(function(){
-	$(".loading").fadeOut()
-})
